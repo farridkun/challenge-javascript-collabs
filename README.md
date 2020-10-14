@@ -1,6 +1,6 @@
-## Challenge Javascript with Collaborations
+## Challenge Javascript with Collaborations 💫🥂
 
-### Weekly Task
+### Weekly Task From The Class 🌱
 
 ** Made a Student Class with definitions in Below,
 

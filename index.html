@@ -16,8 +16,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="shadow-lg mb-5 rounded bg-primary-1">
-    <div class="col bg-secondary-1">
+  <body class="bg-primary-1">
+    <div class="shadow rounded col bg-secondary-1">
       <div class="container">
         <div class="row justify-content-center">
           <h3 class="font-weight-bolder mt-3">
@@ -61,6 +61,8 @@
             👋
           </p>
         </div>
+
+        <!-- !Start Action Button -->
         <div class="row justify-content-center mt-3">
           <button
             type="button"
@@ -79,8 +81,11 @@
             Delete Data 💥
           </button>
         </div>
+        <!-- !End Action Button -->
       </div>
     </div>
+
+    <!-- !Start Table Data -->
     <div class="container mt-5">
       <div class="row justify-content-center">
         <table class="table">
@@ -127,6 +132,7 @@
         </table>
       </div>
     </div>
+    <!-- !End Table Data -->
 
     <!-- !Start Modal Add Data -->
     <div
@@ -251,6 +257,41 @@
       </div>
     </div>
     <!-- !End Modal Add Data -->
+
+    <!-- !Start Footer -->
+    <div class="bg-secondary-1 shadow p-1 rounded fixed-bottom">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="d-flex justify-content-between align-items-center">
+            <div
+              class="d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 px-3"
+            >
+              <span class="d-flex align-items-center font-weight-bolder"
+                >Status</span
+              >
+            </div>
+            <marquee
+              direction="left"
+              onmouseover="this.stop();"
+              onmouseout="this.start();"
+              scrollamount="10"
+            >
+              Make Class Student is ✅ || Call Function is ❌ || UI is ✅ ||
+              Responsive ❌ || Progress <strong><i>55%</i></strong>
+            </marquee>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-row flex-grow-1 flex-fill py-2 px-3">
+            <span class="d-flex align-items-center font-weight-bolder"
+              >Made by 🤎 with Prides and Huge Efforts at Home 🥂
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !End Footer -->
+
     <!-- !Main Javascript -->
     <script src="./assets/js/main.js"></script>
     <!-- ?Main Bootstrap JS -->

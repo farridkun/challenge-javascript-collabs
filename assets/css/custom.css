@@ -1,8 +1,49 @@
 * {
-    font-family: 'Jost', sans-serif;
-    color:#caf0f8;
+  font-family: 'Jost', sans-serif;
+  color: #edc4b3;
+  overflow: hidden;
+}
+
+*::selection {
+  background: #774936;
+}
+
+a {
+  color: #deab90 !important;
 }
 
 .bg-primary-1 {
-    background-color: #03045e;
+  background-color: #774936;
+}
+
+.bg-secondary-1 {
+  background-color: #8a5a44;
+}
+
+.btn-primary-1 {
+  color: #8a5a44 !important;
+  background-color: #d69f7e !important;
+  border-color: #d69f7e !important;
+}
+
+.btn-secondary-1 {
+  color: #8a5a44 !important;
+  background-color: #edc4b3 !important;
+  border-color: #edc4b3 !important;
+}
+
+.thead-primary-1 {
+  color: #edc4b3;
+  background-color: #8a5a44;
+  border-color: #8a5a44;
+}
+
+.form-control:focus {
+  color: #8a5a44 !important;
+  background-color: #fff !important;
+  border-color: #edc4b3 !important;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0;
+  box-shadow: 0 0 0 0.2rem #edc4b3 !important;
 }

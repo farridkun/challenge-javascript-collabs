@@ -1,22 +1,273 @@
 <html>
-    <head>
-        <title>Challenge Javascript Collabs 🥂</title>
-        <!-- !Main Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-        <!-- !Main Custom CSS -->
-        <link rel="stylesheet" href="./assets/css/custom.css">
-        <!-- ?Main Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    </head>
-    <body class="bg-primary-1">
-        <h1>Hallo Test....</h1>
-        <p>First Installations...</p>
+  <head>
+    <title>Challenge Javascript Collabs 🥂</title>
+    <!-- !Main Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- !Main Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+    <!-- ?Main Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="shadow-lg mb-5 rounded bg-primary-1">
+    <div class="col bg-secondary-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h3 class="font-weight-bolder mt-3">
+            Challenge Javascript Collabs 🥂
+          </h3>
+        </div>
+        <div class="row justify-content-center">
+          <h5>
+            <a
+              href="https://academy.glints.com"
+              target="_blank"
+              class="font-weight-bolder font-italic text-decoration-none"
+              >Glints Academy</a
+            >
+            ❌
+            <a
+              href="https://binaracademy.com"
+              target="_blank"
+              class="font-weight-bolder font-italic text-decoration-none"
+              >BINAR</a
+            >
+            <sup class="font-italic">(batch 8)</sup>
+          </h5>
+        </div>
+        <div class="row justify-content-center">
+          <p>
+            Collaborations
+            <a
+              href="https://instagram.com/farrid_jr"
+              target="_blank"
+              class="font-weight-bolder text-decoration-none"
+              >@Farrid_Jr</a
+            >
+            &amp;
+            <a
+              href="https://instagram/x"
+              target="_blank"
+              class="font-weight-bolder text-decoration-none"
+              >@xxxxx</a
+            >
+            👋
+          </p>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <button
+            type="button"
+            class="btn btn-primary-1 font-weight-bolder shadow p-3 mb-5 mr-3 rounded"
+            data-toggle="modal"
+            data-target="#addDataModal"
+          >
+            Add Data 🎯
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary-1 shadow-lg p-3 mb-5 rounded"
+            data-toggle="modal"
+            data-target="#removeDataModal"
+          >
+            Delete Data 💥
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <table class="table">
+          <thead class="thead-primary-1">
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">DOB</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Hobbies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Farrid Kuntoro</td>
+              <td>21</td>
+              <td>23 February 1999</td>
+              <td>Male</td>
+              <td>10116198</td>
+              <td>Photography</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Lorem, ipsum.</td>
+              <td>25</td>
+              <td>17 August 1945</td>
+              <td>Male</td>
+              <td>10116197</td>
+              <td>Lorem.</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Lorem, ipsum.</td>
+              <td>23</td>
+              <td>1 September 1955</td>
+              <td>Female</td>
+              <td>10116242</td>
+              <td>Ipsum.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-        <!-- !Main Javascript -->
-        <script src="./assets/js/main.js"></script>
-        <!-- ?Main Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
-    </body>
+    <!-- !Start Modal Add Data -->
+    <div
+      class="modal fade"
+      id="addDataModal"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="addDataModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary-1 border-0">
+            <h5 class="modal-title" id="addDataModalLabel">Add Data 🎯</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body bg-primary-1 border-0">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"
+                  >Input Name</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                aria-label="Name"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2"
+                  >Input Age</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Age"
+                aria-label="Age"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3"
+                  >Input DOB</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="DOB"
+                aria-label="DOB"
+                aria-describedby="basic-addon3"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon4"
+                  >Input Gender</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Gender"
+                aria-label="Gender"
+                aria-describedby="basic-addon4"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon5"
+                  >Student ID</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Student ID"
+                aria-label="SID"
+                aria-describedby="basic-addon5"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon6"
+                  >Input Hobbies</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Hobbies"
+                aria-label="Hobbies"
+                aria-describedby="basic-addon6"
+              />
+            </div>
+          </div>
+          <div class="modal-footer bg-primary-1 border-0">
+            <button
+              type="button"
+              class="btn btn-secondary-1"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary-1">Add Data🎯</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !End Modal Add Data -->
+    <!-- !Main Javascript -->
+    <script src="./assets/js/main.js"></script>
+    <!-- ?Main Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+      crossorigin="anonymous "
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js "
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN "
+      crossorigin="anonymous "
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV "
+      crossorigin="anonymous "
+    ></script>
+  </body>
 </html>

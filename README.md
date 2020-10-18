@@ -2,12 +2,21 @@
 
 ### Weekly Task From The Class 🌱
 
+** Main Features,
+
+|No|Features      |Status|Notes                       |
+|--|--------------|------|----------------------------|
+|1|Adding Data    |  ✅  |  ⛔                       |
+|2|Clear All Data |  ❌  |Errors Undefinied          |
+|3|Remove Data    |  ✅  |  ⛔                       |
+|4|Edit Data      |  ❌  |Errors Undefinied          |
+
 ** Made a Student Class with definitions in Below,
 
 |No|Attribute   |Notes                             |Status|
 |--|------------|----------------------------------|------|
-|1|Name         |                ⛔                |  ❌  |
-|2|Age          |                ⛔                |  ❌  |
+|1|Name         |                ⛔                |  ✅  |
+|2|Age          |                ⛔                |  ✅  |
 |3|Date of Birth|                ⛔                |  ❌  |
 |4|Gender       |                ⛔                |  ❌  |
 |5|Student ID   | Bisa berupa angka atau teks      |  ❌  |

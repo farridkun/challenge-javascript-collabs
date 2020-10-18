@@ -17,7 +17,7 @@
 |--|------------|----------------------------------|------|
 |1|Name         |                ⛔                |  ✅  |
 |2|Age          |                ⛔                |  ✅  |
-|3|Date of Birth|                ⛔                |  ❌  |
+|3|Date of Birth|                ⛔                |  ✅  |
 |4|Gender       |                ⛔                |  ✅  |
 |5|Student ID   | Bisa berupa angka atau teks      |  ❌  |
 |6|Hobbies      | bisa menampung lebih dari 1 hobi |  ❌  |

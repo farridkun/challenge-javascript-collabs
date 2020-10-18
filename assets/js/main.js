@@ -2,105 +2,121 @@
 // ?dob = Date Of Birth
 // ?sid = Student ID
 
+// ?Student Class : Main Class Task
 class Student {
-  constructor(name, age, dob, sid) {
-    this.name = name;
-    this.age = age;
-    this.dob = dob;
-    this.sid = sid;
-    this.gender = "";
-    this.hobbies = []
-  }
-
-  //set name
-  set studentName(newName){
-    this.name = newName
-  }
-
-  //set age
-  set studentAge(newAge){
-    this.age = newAge
-  }
-
-  //set date of birth
-  set studentDOB(newDOB){
-    this.dob = newDOB
-  }
-
-  //set gender
-  set studentGender(newGender){
-    switch(newGender){
-      case "Female":
-        this.gender = newGender
-        break;
-      case "Male":
-        this.gender = newGender
-        break;
-      default:
-        this.gender = "Not a Gender"
+    constructor(name, age, dob, sid, gender, hobbies) {
+        this.name = name;
+        this.age = age;
+        this.dob = dob;
+        this.sid = sid;
+        this.gender = gender;
+        this.hobbies = hobbies;
     }
-  }
-
-  //set Hobbies
-  set studentHobbies(newHobbies){
-    this.hobbies.push(newHobbies)
-  }
-
-  //set Remove hobbies
-  set removeStudentHobbies(newHobbies){
-    let hobbiesArray = [];
-    for(let i = 0; i < this.hobbies.length; i++){
-      if(this.hobbies[i] !== newHobbies){
-        hobbiesArray.push(this.hobbies[i]);
-      }
-    }
-    this.hobbies = hobbiesArray
-  }
-
-  //get hobbies
-  get hobbiesList(){
-    return this.hobbies
-  }
-
-  //get student data info
-  get studentInfo(){
-    return `Hello, my name is ${this.name} my age is ${this.age} years old because i birth on ${this.dob} and my hobbies is ${this.hobbies}`
-  }
 }
 
+// ?studentInterface Class : Displaying data from Modal to Users 
+class studentInterface {
+    static displayStudents() {
+        const students = localStorage.getStudents();
 
-//sample declaration a student
+        students.forEach((student) => studentInterface.addStudentToList(student));
+    }
 
-const student1 = new Student({
-  name: "Joni Dave",
-  age: 30,
-  dob: "12 Juli 1990",
-  sid: 101097
+    static addStudentToList(student) {
+        const list = document.querySelector('#student-list');
+
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+      <td>${student.name}</td>
+      <td>${student.age}</td>
+      <td>${student.dob}</td>
+      <td>${student.sid}</td>
+      <td>${student.gender}</td>
+      <td>${student.hobbies}</td>
+      <td><a href="#" class="btn btn-secondary-1 btn-sm delete">Remove 💥</a></td>
+    `;
+
+        list.appendChild(row);
+    }
+
+    static deleteStudent(el) {
+        if (el.classList.contains('delete')) {
+            el.parentElement.parentElement.remove();
+        }
+    }
+
+    static clearFields() {
+        document.querySelector('#name').value = '';
+        document.querySelector('#age').value = '';
+        document.querySelector('#dob').value = '';
+        document.querySelector('#sid').value = '';
+        document.querySelector('#gender').value = '';
+        document.querySelector('#hobbies').value = '';
+    }
+}
+
+// localStorage Class: Handles Storage
+class localStorage {
+    static getStudents() {
+        let students;
+        if (localStorage.getItem('students') === null) {
+            students = [];
+        } else {
+            students = JSON.parse(localStorage.getItem('students'));
+        }
+
+        return students;
+    }
+
+    static addStudent(student) {
+        const students = localStorage.getStudents();
+        students.push(student);
+        localStorage.setItem('students', JSON.stringify(students));
+    }
+
+    static removeStudent(hobbies) {
+        const students = localStorage.getStudents();
+
+        students.forEach((student, index) => {
+            if (student.hobbies === hobbies) {
+                students.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('students', JSON.stringify(students));
+    }
+}
+
+// ?Displaying All Data Student
+document.addEventListener('DOMContentLoaded', studentInterface.displayStudents);
+
+// ?Adding Data Student
+document.querySelector('#student-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector('#name').value;
+    const age = document.querySelector('#age').value;
+    const dob = document.querySelector('#dob').value;
+    const gender = document.querySelector('#gender').value;
+    const sid = document.querySelector('#sid').value;
+    const hobbies = document.querySelector('#hobbies').value;
+
+    // Data Validation
+    if (name === '' || age === '' || dob === '' || gender === '' || sid === '' || hobbies === '') {
+        alert('Please fill in all fields');
+    } else {
+        const student = new Student(name, age, dob, gender, sid, hobbies);
+        studentInterface.addStudentToList(student);
+        localStorage.addStudent(student);
+        alert('Student Added');
+        studentInterface.clearFields();
+    }
 });
 
-const student2 = new Student({
-  name: "Somadin",
-  age: 30,
-  dob: "23 February 1990",
-  sid: 101099
-})
-
-student1.studentName = " Ari Darsan";
-student1.studentAge = 23;
-student1.studentDOB = "09 May 1997";
-student1.studentGender = "Male";
-student1.studentHobbies = "Play Footbal";
-student1.studentHobbies = "Chess";
-student1.studentHobbies = "Playing Game";
-console.log(student1.studentInfo);
-console.log("Hobbies: ")
-for(let i = 0; i < student1.hobbiesList.length; i++){
-  console.log(`${i+1}. ${student1.hobbiesList[i]}`)
-}
-student1.removeStudentHobbies = "Playing Game"
-
-console.log("Hobbies was deleted!")
-console.log("Hobbies: ")
-for(let i = 0; i < student1.hobbiesList.length; i++){
-  console.log(`${i+1}. ${student1.hobbiesList[i]}`)
-}
+// ?Removing a Student
+document.querySelector('#student-list').addEventListener('click', (e) => {
+    studentInterface.deleteStudent(e.target);
+    localStorage.removeStudent(e.target.parentElement.previousElementSibling.textContent);
+    alert('Student Removed');
+});

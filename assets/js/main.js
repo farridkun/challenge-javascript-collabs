@@ -34,7 +34,8 @@ class studentInterface {
       <td>${student.sid}</td>
       <td>${student.gender}</td>
       <td>${student.hobbies}</td>
-      <td><a href="#" class="btn btn-secondary-1 btn-sm delete">Remove 💥</a></td>
+      <td><a href="#" class="btn btn-primary-1 btn-sm edit" onclick="alert('STATUS ❌')">Edit 🧾</a>
+      <a href="#" class="btn btn-secondary-1 btn-sm delete">Remove 🔌</a></td>
     `;
 
         list.appendChild(row);

@@ -14,10 +14,10 @@ class Student {
     }
 }
 
-// ?studentInterface Class : Displaying data from Modal to Users 
+// ?studentInterface Class : Interfacing data from Modal to Users 
 class studentInterface {
     static displayStudents() {
-        const students = localStorage.getStudents();
+        const students = localStore.getStudents();
 
         students.forEach((student) => studentInterface.addStudentToList(student));
     }
@@ -56,8 +56,8 @@ class studentInterface {
     }
 }
 
-// localStorage Class: Handles Storage
-class localStorage {
+// localStore Class: Handles Storage
+class localStore {
     static getStudents() {
         let students;
         if (localStorage.getItem('students') === null) {
@@ -70,13 +70,13 @@ class localStorage {
     }
 
     static addStudent(student) {
-        const students = localStorage.getStudents();
+        const students = localStore.getStudents();
         students.push(student);
         localStorage.setItem('students', JSON.stringify(students));
     }
 
     static removeStudent(hobbies) {
-        const students = localStorage.getStudents();
+        const students = localStore.getStudents();
 
         students.forEach((student, index) => {
             if (student.hobbies === hobbies) {
@@ -104,12 +104,12 @@ document.querySelector('#student-form').addEventListener('submit', (e) => {
 
     // Data Validation
     if (name === '' || age === '' || dob === '' || gender === '' || sid === '' || hobbies === '') {
-        alert('Please fill in all fields');
+        alert('Please fill in all fields 😱😱');
     } else {
         const student = new Student(name, age, dob, gender, sid, hobbies);
         studentInterface.addStudentToList(student);
-        localStorage.addStudent(student);
-        alert('Student Added');
+        localStore.addStudent(student);
+        alert('Student Has Been Added 🆗✅');
         studentInterface.clearFields();
     }
 });
@@ -117,6 +117,6 @@ document.querySelector('#student-form').addEventListener('submit', (e) => {
 // ?Removing a Student
 document.querySelector('#student-list').addEventListener('click', (e) => {
     studentInterface.deleteStudent(e.target);
-    localStorage.removeStudent(e.target.parentElement.previousElementSibling.textContent);
-    alert('Student Removed');
+    localStore.removeStudent(e.target.parentElement.previousElementSibling.textContent);
+    alert('Student Has Been Removed 🔌❌');
 });
